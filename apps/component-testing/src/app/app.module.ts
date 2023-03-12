@@ -8,9 +8,6 @@ import { appRoutes } from './app.routes';
 import {ComponentStoreTestComponentStoreTestModule} from '@cabinet20/component-store-test';
 import {Store, StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
-import {
-  ComponentStoreStore
-} from '../../../../libs/component-store-test/component-store-test/src/lib/+state/component-store.store';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,7 +19,7 @@ import {
     StoreModule.forRoot({}),
     EffectsModule.forRoot()
   ],
-  providers: [ComponentStoreStore],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

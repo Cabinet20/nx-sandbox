@@ -6,7 +6,7 @@ import * as UniversalStoreActions from './universal-store.actions';
 export const UNIVERSAL_STORE_FEATURE_KEY = 'universalStore';
 
 export interface UniversalStoreState {
-  text: string | number; // which UniversalStore record has been selected
+  text: string; // which UniversalStore record has been selected
   loaded: boolean; // has the UniversalStore list been loaded
   error?: string | null; // last known error (if any)
 }
@@ -29,13 +29,10 @@ const reducer = createReducer(
     loaded: false,
     error: null,
   })),
-  on(UniversalStoreActions.updateText, (state, {text}) => {
-    debugger;
-    return {
-      ...state,
-      text: text,
-    };
-  }),
+  on(UniversalStoreActions.updateText, (state, {text}) => ({
+    ...state,
+    text: text,
+  })),
   on(UniversalStoreActions.loadUniversalStoreFailure, (state, {error}) => ({
     ...state,
     error,

@@ -1,17 +1,15 @@
-import { Route } from '@angular/router';
-import {
-  LayoutComponent
-} from '../../../../libs/component-store-test/component-store-test/src/lib/layout/layout.component';
+import {Route} from '@angular/router';
+import {LayoutComponent} from '@cabinet20/component-store-test';
 
 export const appRoutes: Route[] = [
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'home',
     component: LayoutComponent,
-    pathMatch: 'full'
-  }
+    loadChildren: () => import('@cabinet20/component-store-test').then(m => m.ComponentStoreTestComponentStoreTestModule),
+  },
 ];

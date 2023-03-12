@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@cabinet20/component-store-test": [
+        "libs/component-store-test/component-store-test/src/index.ts"
+      ],
+      "@cabinet20/universal-state": [
+        "libs/universal-data/shared-data-access/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

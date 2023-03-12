@@ -1,0 +1,10 @@
+<div>
+  <label for="text">Universal text</label><br/>
+  <input id="text"
+         type="text"
+         (change)="changeText($event)"/>
+</div>
+<div>
+  <small>{{ text$ | async}}</small>
+  <small>{{ someText$ | async}}</small>
+</div>

@@ -20,7 +20,8 @@
       ],
       "@cabinet20/universal-state": [
         "libs/universal-data/shared-data-access/src/index.ts"
-      ]
+      ],
+      "@nx-sandbox/shared/ui": ["libs/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
